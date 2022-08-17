@@ -20,8 +20,7 @@ async def on_message(message):
 
         while gameNotOver:
 
-            await message.channel.send("Your numbers are `" + str(N[:]) +
-                                       "` **!roll** the dice.")
+            await message.channel.send("Your numbers are `" + str(N[:]) + "` **!roll** the dice.")
 
             roll = await client.wait_for("message", timeout=60)
             if roll.content.startswith('!roll'):
